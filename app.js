@@ -1,5 +1,5 @@
-// const API_KEY = `3265874a2c77ae4a04bb96236a642d2f`
- const API_KEY=`b73533a6791c1e3c8cbaa2f258e286f2`;
+const API_KEY = `3265874a2c77ae4a04bb96236a642d2f`
+ //const API_KEY=`b73533a6791c1e3c8cbaa2f258e286f2`;
 
 const form = document.querySelector("form")
 const search = document.querySelector("#search")
@@ -9,7 +9,7 @@ const weather = document.querySelector("#weather")
     // const IMG_URL = `https: //openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
 const getWeather = async(city) => {
     weather.innerHTML = `<h2> Loading...<h2>`
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
     const response = await fetch(url);
     const data = await response.json()
     return showWeather(data)
